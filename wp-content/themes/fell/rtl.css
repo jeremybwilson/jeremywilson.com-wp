@@ -1,0 +1,132 @@
+/*
+Theme Name: Fell
+
+Support for languages written in Right To Left (RTL)
+*/
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+#site-header .social-nav li:not(:last-child) {
+  margin-right: 0;
+  margin-left: var(--spacing);
+}
+
+blockquote {
+  border-left: none;
+  padding-left: 0;
+  border-right: 2px solid var(--color-bg-alt);
+  padding-right: var(--spacing);
+}
+
+td,
+th {
+  text-align: right;
+}
+
+ul,
+ol {
+  margin-left: 0;
+  margin-right: var(--spacing);
+}
+
+.gallery-item {
+  text-align: right;
+}
+
+.format-link .entry-content a::before {
+  content: '';
+  padding-right: 0;
+}
+
+.format-link .entry-content a::after {
+  font-family: 'fell-icon-font';
+  content: '\EA0F';
+  padding-left: var(--spacing-half);
+}
+
+.post-navigation .nav-next {
+  margin-left: 0;
+  text-align: left;
+}
+
+.comment-navigation .nav-previous::before {
+  padding-right: 0;
+  padding-left: 0.5em;
+}
+
+.comment-navigation .nav-next::after {
+  padding-left: 0;
+  padding-right: 0.5em;
+}
+
+.comments-area .navigation > div {
+  margin: 0 0 0 var(--spacing-half);
+}
+
+.commentlist {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.widget ul ul {
+  margin: 0 1rem 0 0;
+}
+
+.widget_calendar #prev,
+.widget_calendar #prev + .pad {
+  border-right: 1px solid var(--color-bg-alt);
+}
+
+.widget_calendar #next,
+.widget_calendar #next + .pad {
+  border-right: 0;
+}
+
+.widget_calendar #prev {
+  text-align: right;
+}
+
+.widget_calendar #next {
+  text-align: left;
+}
+
+#scroll-to-top {
+  right: auto;
+  left: 20px;
+}
+
+@media (min-width: 1024px) {
+  #site-container {
+    grid-template-areas: "site-header site-header site-header" "widget-areas-above-content widget-areas-above-content widget-areas-above-content" "widget-area-right-sidebar main widget-area-left-sidebar" "widget-areas-below-content widget-areas-below-content widget-areas-below-content" "widget-areas-footer widget-areas-footer widget-areas-footer" "site-footer site-footer site-footer";
+  }
+  #header-nav > li:not(:first-child) {
+    padding-left: 0;
+    padding-right: var(--spacing-half);
+  }
+  #header-nav > li:not(:last-child) {
+    padding-right: 0;
+    padding-left: var(--spacing-half);
+  }
+  #header-nav > li > ul {
+    left: auto;
+    right: -webkit-calc(var(--spacing) * -1);
+    right: calc(var(--spacing) * -1);
+  }
+  #header-nav ~ .social-nav {
+    border-left: none;
+    padding-left: 0;
+    border-right: 1px solid var(--color-text-alt);
+    padding-right: var(--spacing);
+  }
+  .entry-meta > *:not(:last-child) {
+    margin-right: 0;
+    margin-left: var(--spacing);
+  }
+  .post-categories > *:not(:last-child),
+  .post-tags > *:not(:last-child) {
+    margin-right: 0;
+    margin-left: var(--spacing-half);
+  }
+}
