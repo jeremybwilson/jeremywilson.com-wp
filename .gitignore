@@ -14,9 +14,25 @@ npm-debug.log
 .env
 .env.*
 
+license.txt
+readme.html
 wp-admin/
 wp-includes/
 wp-config.php
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-content/
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
 
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
